@@ -1,0 +1,48 @@
+.textContainer {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.text {
+
+}
+
+.projectsContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0 auto;
+}
+
+.project {
+  background-color: #617AFF;
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.project:hover {
+  box-shadow: black 2px 2px 12px;
+}
+
+.name {
+  text-align: center;
+}
+
+.buttons {
+  bottom: 0;
+  width: 100%;
+}

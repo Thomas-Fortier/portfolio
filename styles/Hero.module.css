@@ -1,0 +1,14 @@
+.hero {
+  padding: 150px 12vw;
+  background-color: #0d192b;
+  color: aliceblue;
+}
+
+.text {
+  margin: 25px 0;
+  line-height: 30px;
+}
+
+.content {
+  width: 30vw;
+}
