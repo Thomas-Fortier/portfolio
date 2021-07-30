@@ -1,4 +1,4 @@
-import ProjectType from './Project';
+import ProjectType from '../types/Project';
 
 interface ProjectProps {
   projects: ProjectType[];

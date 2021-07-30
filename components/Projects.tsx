@@ -2,7 +2,7 @@
 import { Button, ButtonGroup } from '@material-ui/core';
 import Link from 'next/link';
 import ProjectType from '../lib/types/Project';
-import ProjectProps from '../lib/types/ProjectProps';
+import ProjectProps from '../lib/props/ProjectProps';
 import Home from '../pages';
 
 // Styles
