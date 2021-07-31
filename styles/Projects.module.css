@@ -25,13 +25,14 @@
 }
 
 .project {
-  background-color: #617AFF;
+  background-color: #0d192b;
+  color: aliceblue;
   width: 350px;
-  height: 350px;
-  padding: 20px;
+  height: 400px;
   display: inline-block;
   margin: 10px;
   border-radius: 15px;
+  position: relative;
 }
 
 .project:hover {
@@ -40,9 +41,37 @@
 
 .name {
   text-align: center;
+  margin-bottom: 10px;
+  color: aliceblue;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #0d6efd;
+  border-radius: 10px 10px 0 0;
+}
+
+.content {
+  padding: 20px;
 }
 
 .buttons {
+  position: absolute;
+  margin: 0 auto 30px auto;
   bottom: 0;
-  width: 100%;
+}
+
+/* ----- Language styling ----- */
+.ts {
+  color: rgb(75, 75, 250);
+}
+
+.cs {
+  color: rgb(0, 199, 0);
+}
+
+.js {
+  color: rgb(255, 178, 36);
+}
+
+.default {
+  color: aliceblue;
 }

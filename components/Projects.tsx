@@ -26,12 +26,14 @@ function Projects({ projects }: ProjectProps) {
               return (
                 <div className={`${styles.project}`} key={project.name}>
                   <h3 className={`${styles.name}`}>{project.name}</h3>
-                  <p>{project.description}</p>
-                  <p>Created on <span>{project.created_at}</span></p>
-                  <p>Language: {project.language}</p>
+                  <div className={`${styles.content}`}>
+                    <p>{project.description}</p>
+                    <p>Created on <span>{project.created_at}</span></p>
+                    {getLanguageStyling(project.language)}
 
-                  <div className={`${styles.buttons}`}>
-                    {getHomepageUrl(project)}
+                    <div className={`${styles.buttons}`}>
+                      {getExternalButtons(project)}
+                    </div>
                   </div>
                 </div>
               );
@@ -43,7 +45,7 @@ function Projects({ projects }: ProjectProps) {
   );
 }
 
-function getHomepageUrl(project: ProjectType) {
+function getExternalButtons(project: ProjectType) {
   const websiteUrl = project.homepage;
   const sourceButton = <Button href={project.html_url} variant="contained" target="_blank">Source</Button>;
   const websiteButton = <Button href={websiteUrl} variant="contained" target="_blank">Website</Button>;
@@ -58,6 +60,26 @@ function getHomepageUrl(project: ProjectType) {
       {websiteButton}
     </ButtonGroup>
   );
+}
+
+function getLanguageStyling(language: string) {
+  let styling: any;
+
+  switch(language) {
+    case 'TypeScript':
+      styling = styles.ts;
+      break;
+    case 'C#':
+      styling = styles.cs;
+      break;
+    case 'JavaScript':
+      styling = styles.js;
+      break;
+    default:
+      styling = styles.default;
+  }
+
+  return <p>Language: <span className={styling}>{language}</span></p>;
 }
 
 export default Projects;
